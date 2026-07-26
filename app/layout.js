@@ -3,18 +3,57 @@ import './globals.css'
 import Footer from "./components/footer";
 
 export const metadata = {
-  title: 'Anonymous Stories - Share Your Sadness Journey',
-  description: 'A safe space to share your stories of sadness anonymously. Connect with others going through similar experiences. Find support and hope in our community.',
-  keywords: 'anonymous stories, sadness, depression support, mental health, share stories, online support group',
-  icons: {
-    icon: "/favicon.png",
+  metadataBase: new URL("https://justyou.co.in"),
+
+  title: {
+    default: "Anonymous Stories | Share Your Story Anonymously",
+    template: "%s | Anonymous Stories",
   },
+
+  description:
+    "A safe place to anonymously share your experiences, read inspiring stories, and find support through shared journeys.",
+
+  keywords: [
+    "anonymous stories",
+    "share stories anonymously",
+    "mental health",
+    "confessions",
+    "support",
+    "community",
+    "anonymous forum",
+    "personal stories",
+  ],
+
+  authors: [{ name: "Anonymous Stories" }],
+
+  creator: "Anonymous Stories",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   openGraph: {
-    title: 'Anonymous Stories',
-    description: 'Share your story anonymously and find support in our community.',
-    type: 'website',
+    title: "Anonymous Stories",
+    description:
+      "Share your story anonymously. Read inspiring experiences from people around the world.",
+
+    url: "https://justyou.co.in",
+
+    siteName: "Anonymous Stories",
+
+    locale: "en_US",
+
+    type: "website",
   },
-}
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Anonymous Stories",
+    description:
+      "Share your story anonymously and connect with others.",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
