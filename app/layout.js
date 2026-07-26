@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import './globals.css'
-import Footer from "./components/Footer";
+import Footer from "./components/footer";
 
 export const metadata = {
   title: 'Anonymous Stories - Share Your Sadness Journey',
