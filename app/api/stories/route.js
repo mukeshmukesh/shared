@@ -7,9 +7,15 @@ export async function GET() {
     await connectDB()
     const stories = await Story.find({}).sort({ createdAt: -1 }).limit(20)
     return NextResponse.json(stories)
-  } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch stories' }, { status: 500 })
   }
+  catch (error) {
+  console.error("Stories API Error:", error)
+
+  return NextResponse.json(
+    { error: "Failed to fetch stories" },
+    { status: 500 }
+  )
+}
 }
 
 export async function POST(request) {
