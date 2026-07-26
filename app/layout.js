@@ -1,9 +1,14 @@
+import Navbar from "./components/Navbar";
 import './globals.css'
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: 'Anonymous Stories - Share Your Sadness Journey',
   description: 'A safe space to share your stories of sadness anonymously. Connect with others going through similar experiences. Find support and hope in our community.',
   keywords: 'anonymous stories, sadness, depression support, mental health, share stories, online support group',
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: 'Anonymous Stories',
     description: 'Share your story anonymously and find support in our community.',
@@ -28,7 +33,11 @@ export default function RootLayout({ children }) {
           `,
         }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+          {children}
+        <Footer />
+    </body>
     </html>
   )
 }
