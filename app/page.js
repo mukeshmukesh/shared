@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import StoriesList from './components/StoriesList'
 import ShareButton from './components/ShareButton'
-import AdBanner from './components/AdBanner'
+// import AdBanner from './components/AdBanner'
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
         <ShareButton />
       </header>
 
-      <AdBanner />
+      {/* <AdBanner /> */}
 
       <main>
         <h2 style={{ marginBottom: '1rem' }}>Recent Stories</h2>
